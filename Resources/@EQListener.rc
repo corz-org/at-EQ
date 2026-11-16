@@ -1,0 +1,39 @@
+// @EQListener Windows icon and executable file properties.
+#include <windows.h>
+#include "@EQListener.h"
+
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+
+IDI_EQ_LISTENER ICON "Resources\\@EQListener.ico"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION LISTENER_FILE_VERSION
+ PRODUCTVERSION LISTENER_FILE_VERSION
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+ FILEFLAGS 0
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "080904B0"
+    BEGIN
+      VALUE "CompanyName", "corz.org\0"
+      VALUE "FileDescription", "@EQ Listener - from corz.org\0"
+      VALUE "FileVersion", VERSION_STR "\0"
+      VALUE "InternalName", "@EQListener\0"
+      VALUE "LegalCopyright", "corz.org\0"
+      VALUE "OriginalFilename", "@EQListener.exe\0"
+      VALUE "ProductName", "@EQ\0"
+      VALUE "ProductVersion", VERSION_STR "\0"
+      VALUE "Comments", "@EQ Listener: This runs in the background capturing CABLE audio and applies channel switching, preamp and equalisation levels for the current monitor's selected output. Use @EQ.exe to configure your presets.\0"
+      VALUE "Contact", "software@corz.org\0"
+      VALUE "Web Page", "https://corz.org/windows/software/@EQ/\0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0809, 1200
+  END
+END
