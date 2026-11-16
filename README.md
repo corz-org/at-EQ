@@ -217,30 +217,6 @@
 <li>The "Listen" checkbox on CABLE Output (Windows sound &gt; recorder) must be <em>unchecked</em> in use, or you will get double audio, at best.
 </li>
 </ul>
-<h2>Download @EQ..
-</h2>
-<div>
-<div> <a href="https://corz.org/public/machine/Windows/Software/%40EQ/%40EQ.zip?download" title="Download and use @EQ"> <span>download</span>  <span><img alt="Image of big cardboard box, containing the @EQ package (zip), well, the image is of a parcel, with the @EQ logo overlayed on one side, but you get the idea." src="https://corz.org/windows/software/@EQ/img/@EQ.webp"/></span></a> <br/> <span>@EQ</span>
-</div>
-<p><a href="https://corz.org/public/machine/Windows/Software/%40EQ/%40EQ.zip?view&amp;clean=true" title="Check out the files inside this Zip!">click to see zip archive contents</a>
-</p>
-<div title="click here to check out the app responsible for these fine hashes!"><strong>LIVE Hashes..</strong><br/># made with checksum.. 64-bit edition. # from corz.org.. https://corz.org/windows/software/checksum/ # #sha2#@EQ.zip#2026.11.05@10.19:09 82c8a05ab8d087a6f389333f5862ea39e77ee0502521d7ddebc676e9c9821f0b *@EQ.zip
-</div>
-</div>
-<h2>Sauce..
-</h2>
-<p>Check out the source files <a href="https://corz.org/machine/Windows/Software/%40EQ/Source/" title="@EQ Source files, and more..">here</a>
-</p>
-<p>Or grab a zip of everything; C++ listener and AutoIt front-end app, with all includes, icons, resources and so on, ready-to-build, here..
-</p>
-<div>
-<div> <a href="https://corz.org/public/machine/Windows/Software/%40EQ/%40EQ_Source.zip?download" title="Download @EQ source pack, for free.."> <span>download</span>  <span><img alt="Image of big cardboard box, containing the @EQ_Source package (zip), well, the image is of a parcel, with the @EQ_Source logo overlayed on one side, but you get the idea." src="https://corz.org/img/windows/zipped-au3-AutoIt-Source-document.png"/></span></a> <br/> <span>@EQ Source</span>
-</div>
-<p><a href="https://corz.org/public/machine/Windows/Software/%40EQ/%40EQ_Source.zip?view&amp;clean=true" title="Check out the files inside this Zip!">click to see zip archive contents</a>
-</p>
-<div title="click here to check out the app responsible for these fine hashes!"><strong>LIVE Hashes..</strong><br/># made with checksum.. 64-bit edition. # from corz.org.. https://corz.org/windows/software/checksum/ # #sha2#@EQ_Source.zip#2026.11.05@10.29:25 0135ef57c7bca5f57ed7bbd8f85dfb86db3991241324303392fb2d425f3ad977 *@EQ_Source.zip
-</div>
-</div>
 </div>
 
 ## While I try to keep this Git repo up-to-date, the latest source can always be found [here](https://corz.org/windows/software/@EQ/)
