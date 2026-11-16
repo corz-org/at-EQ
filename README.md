@@ -1,7 +1,7 @@
 # [@EQ](https://corz.org/windows/software/@EQ/)
 
 <div>
-<div> <a href="https://corz.org/windows/software/@EQ/#section-Download" title="Click here to go straight to the downloads!"><img alt="@EQ icon/logo, in super-large 256 pixel size!" src="https://corz.org/windows/software/@EQ/img/@EQ.webp"/></a>
+<div> <img alt="@EQ icon/logo, in super-large 256 pixel size!" src="https://corz.org/windows/software/@EQ/img/@EQ.webp"/>
 </div>
 <h4>Your speakers follow your screen, <em>automatically</em>.
 </h4>
@@ -25,7 +25,7 @@
 <li>
 <h2>The Wire
 </h2>
-<p>@EQ uses the <a href="https://vb-audio.com/Cable/" title="VB-CABLE is Donationware. If you find this useful you might consider a donation.">VB-Audio virtual cable</a>; basically a driver; which you will need to install and setup. This is pretty simple. See the <a href="https://corz.org/windows/software/@EQ/#CABLE-setup" title="Setup CABLE">CABLE setup section</a>.
+<p>@EQ uses the <a href="https://vb-audio.com/Cable/" title="VB-CABLE is Donationware. If you find this useful you might consider a donation.">VB-Audio virtual cable</a>; basically a driver; which you will need to install and setup. This is pretty simple. See the <a href="#cable-setup" title="Setup CABLE">CABLE setup section</a>.
 </p>
 <p>CABLE Input is the playback end your apps play into. CABLE Output is the recording end the listener reads.
 </p>
@@ -45,7 +45,7 @@
 </p>
 </li>
 </ul> <br/> <br/>
-<h2>CABLE setup:
+<a name="cable-setup"></a><h2>CABLE setup:
 </h2>
 <p>First, install the <a href="https://vb-audio.com/Cable/" title="VB CABLE - yes a stupid name. Good luck searching the web for help!">VB-Audio virtual cable</a> as Admin. It adds two sound devices to your system audio setup: CABLE Input (ignore the 16ch variant) on the playback side and CABLE Output on the recording side. You will need to reboot to complete the installation.
 </p>
