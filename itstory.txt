@@ -1,0 +1,32 @@
+
+     #####    ###     ##  ### ########             ###     ##  ###    ###TM
+   #######  #######   ####### ########           #######   #######  #######
+  ###      ###   ###  ###         ###           ###   ###  ###     ###   ##
+  ###      ###   ###  ##       ###              ###   ###  ##      ###   ##
+   #######  #######   ##      ########    ###    #######   ##        ######
+     #####    ###     ##      ########    ###      ###     ##           ###
+                                                                     #####
+
+  @EQ
+
+
+  http://corz.org/windows/software/@EQ/
+
+  (c) corz.org
+
+  itstory.. aka 'version history'.. aka 'changes'..
+  [known bugs at the bottom]
+
+  Key..
+
+      * Fixes
+      ~ Changes
+      + New stuff
+      D For Developers/Tinkerers
+
+
+
+	1.1
+
+    First public release.
+
