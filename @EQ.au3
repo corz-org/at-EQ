@@ -1,5 +1,5 @@
-#AutoIt3Wrapper_Res_Fileversion=1.0.78
-global const $VERSION = "1.0.78"
+#AutoIt3Wrapper_Res_Fileversion=1.1.0
+global const $VERSION = "1.1.0"
 
 #include <Array.au3>
 #include <GUIConstantsEx.au3>
