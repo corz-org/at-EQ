@@ -2799,5 +2799,8 @@ endfunc
 #AutoIt3Wrapper_Run_After=start "" "C:\Program Files\corz\@EQ\@EQListener.exe"
 #AutoIt3Wrapper_Run_After=start "" "C:\Program Files\corz\@EQ\@EQ.exe"
 
+; Enable both directives for a GitHub source publish.
+;#AutoIt3Wrapper_Run_After_Admin=N
+;#AutoIt3Wrapper_Run_After="C:\UNIX\Python312\python.exe" "C:\Users\Dad\Documents\Scripts\publish-autoit-source.py" "%scriptdir%" at-EQ "%fileversion%"
 #EndRegion
 
