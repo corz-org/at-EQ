@@ -41,7 +41,7 @@
 </h2>
 <p><code>@EQ.exe</code> enables you to edit audio presets and links monitors to speakers. The app updates the (ini) settings for the listener to read and apply.
 </p>
-<p>When @EQ.exe isn't running, the listener stops checking the ini file until you switch monitors, switch output device, or change the "default" output device.
+<p>When <code>@EQ.exe</code> isn't running, the listener stops checking the ini file until you switch monitors, switch output device, or change the "default" output device.
 </p>
 </li>
 </ul> <br/> <br/>
@@ -55,9 +55,9 @@
 <li>
 <h2>Microphone privacy
 </h2>
-<p>Windows Settings (Win+I) &gt; Privacy and security &gt; Microphone. Enable "Microphone access" and "Let desktop apps access the microphone". With either off, audio captures fail and the listener instead creates a <code>capture denied</code> entry to its log. CABLE counts as a microphone here. There are technical resons for this, outside the scope of this document.
+<p>Windows Settings (<code>Win+I</code>) &gt; Privacy and security &gt; Microphone. Enable "Microphone access" and "Let desktop apps access the microphone". With either off, audio captures fail and the listener instead creates a <code>capture denied</code> entry to its log. CABLE counts as a microphone here. There are technical resons for this, outside the scope of this document.
 </p>
-<p>No program can work around this switch, so if you want <code>@EQ</code> to work, that's your only option. It doesn't matter if you have an actual microphone or not; because of the way CABLE routes audio, these setting need to be enabled for CABLE to work with <code>@EQ</code>.
+<p>If you want <code>@EQ</code> to work, that's your only option. It doesn't matter if you have an actual microphone or not; because of the way CABLE routes audio, these setting need to be enabled for CABLE to work with <code>@EQ</code>.
 </p>
 </li>
 <li>
@@ -67,13 +67,13 @@
 </p>
 <p>Once installed and selected as the default output device, every app that sends audio to the "default" device will now use CABLE for its output.
 </p>
-<p>To test if CABLE is working, head to the Sound &gt; Recording tab (best to use <span title="Use Win+R and enter this in the dialog">mmsys.cpl</span> for this, as the newer Windows audio control panel is rubbish), open CABLE Output properties &gt; Listen tab &gt; check "Listen", and below select your current speakers (ensure you have some audio playing), apply.
+<p>To test if CABLE is working, head to the Sound &gt; Recording tab (best to use <code title="Use Win+R and enter this in the dialog">mmsys.cpl</code> for this, as the newer Windows audio control panel is rubbish), open CABLE Output properties &gt; Listen tab &gt; check "Listen", and below select your current speakers (ensure you have some audio playing), apply.
 </p>
 <p>If all goes well, you should hear your audio. Good. Test complete. Now disable Listen and select "Default Playback Device", move on..
 </p>
 </li>
 </ul>
-<p>Any issues, check the <code>@EQListener.log</code> (in <span>%APPDATA%\corz\@EQ</span>) for details. <br/> <br/>
+<p>Any issues, check the <code>@EQListener.log</code> (in <code>%APPDATA%\corz\@EQ</code>) for details. <br/> <br/>
 </p>
 <h2>@EQ App:
 </h2> <img alt="The main @EQ interface" src="https://corz.org/windows/software/@EQ/img/@EQ_Main_Window.webp" title="The main @EQ Interface"/>
@@ -84,10 +84,12 @@
 </li>
 <li>Select any slider (or its rail, which moves the slider to that point) then move your pointer left or right to "draw" an EQ curve.
 </li>
-<li>If you edit a curve in one mode, when you switch to a new mode, so long as you haven't edited that mode already, your curve will be retained; recalculated to the new number of bands. Works both ways, so you can setup a simple curve in 5 or 10 band EQ, then transfer it to a 20 band paramteric EQ for finer control, or whatever.
-</li>
+<li>
+<p>If you edit a curve in one mode, when you switch to a new mode, so long as you haven't edited that mode already, your curve will be retained; recalculated to the new number of bands. Works both ways, so you can setup a simple curve in 5 or 10 band EQ, then transfer it to a 20 band paramteric EQ for finer control, or whatever.
+</p>
 <p>This magic will also be applied of you flatten the sliders in your current mode, switch to a different mode with a curve you like, and back. Voila!
 </p>
+</li>
 <li>Whatever you set for the lowest/highest frequency values is used for all values beyond (aka. "flat outside"). So, for example, if you need to clamp the low frequency output on your speakers at 60Hz, create a slider at 60Hz (set to 0) and another at 61Hz (or whatever), where your real settings will begin.
 <p>Similarly, if you delete all-but-one of your parametric EQ bands, the remaining band effectively becomes a volume control, spanning all EQ bands; pointless, but illustrates the point.
 </p>
@@ -145,31 +147,31 @@
 </p>
 <ul>
 <li>
-<p>--list
+<p><code>--list</code>
 </p>
-<p>list render endpoints (audo outputs) as id|name
-</p>
-</li>
-<li>
-<p>--default
-</p>
-<p>reports DefaultOutput=id
+<p>list render endpoints (audo outputs) as <code>id|name</code>
 </p>
 </li>
 <li>
-<p>--monitor
+<p><code>--default</code>
+</p>
+<p>reports <code>DefaultOutput=id</code>
+</p>
+</li>
+<li>
+<p><code>--monitor</code>
 </p>
 <p>print current monitor id
 </p>
 </li>
 <li>
-<p>--ini <path> </path>
+<p><code>--ini &lt;path&gt;</code>
 </p>
 <p>use a different ini file (defaults to <code>%APPDATA%\corz\@EQ\@EQ.ini</code>)
 </p>
 </li>
 <li>
-<p>--help
+<p><code>--help</code>
 </p>
 <p>shows this list
 </p>
@@ -177,13 +179,13 @@
 </ul>
 <p>@EQListener never writes to your ini file, it only reads. When the @EQ app is open it does this every 500ms, so your changes happen live.
 </p>
-<p>As mentioned, the listener logs to <span>%APPDATA%\corz\@EQ</span>. This log is wiped on every launch.
+<p>As mentioned, the listener logs to <code>%APPDATA%\corz\@EQ</code>. This log is wiped on every launch.
 </p>
-<p>@EQListener.exe runs as a Windows app, but in the background, which is why if you try run it in a shell, you won't see any output.
+<p><code>@EQListener.exe</code> runs as a Windows app, but in the background, which is why if you try run it in a shell, you won't see any output.
 </p>
 <p>If you want to capture the output from the listener, do something like this:
 </p>
-<p>python -c "import subprocess; print(subprocess.run([r'C:\Program Files\corz\@EQ\@EQListener.exe', '--help'], capture_output=True, text=True).stdout, end='')" <br/> <br/>
+<p><code>python -c "import subprocess; print(subprocess.run([r'C:\Program Files\corz\@EQ\@EQListener.exe', '--help'], capture_output=True, text=True).stdout, end='')"</code> <br/> <br/>
 </p>
 <h2>In operation..
 </h2>
