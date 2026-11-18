@@ -1,12 +1,16 @@
 #include "Resources/@EQListener.h"
 
-// @EQListener: WASAPI back-end for @EQ.
+// @EQListener: WASAPI back-end for @EQ, from corz.org
+// https://corz.org/windows/software/@EQ/
 //
 // Captures the VB-Audio HiFi CABLE output, runs the preset EQ convolution,
 // renders to the real speaker output linked to the current monitor.
 // Watches WM_DISPLAYCHANGE, WM_DEVICECHANGE and
 // IMMNotificationClient.OnDefaultDeviceChanged, then reloads the
 // preset from %AppData%\corz\@EQ\@EQ.ini with a 200 ms crossfade.
+//
+// Requires VB CABLE: https://vb-audio.com/Cable/
+//
 #include <windows.h>
 #include <shlobj.h>
 #include <mmdeviceapi.h>
@@ -33,6 +37,7 @@
 static const double GAIN_MIN_DB = -24.0, GAIN_MAX_DB = 24.0;
 static const DWORD MASTER_VOLUME_POLL_MS = 30;
 static const DWORD CAPTURE_RETRY_MS = 2000;
+
 // Keep silent CABLE playback separate from the audible output session.
 static const GUID CABLE_SILENCE_SESSION_GUID = {
   0x32f8f61b, 0xe082, 0x4f0e, {0x9e, 0x6b, 0xc4, 0xab, 0x15, 0xa7, 0xb3, 0x20}

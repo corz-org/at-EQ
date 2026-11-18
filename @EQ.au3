@@ -1,5 +1,16 @@
-#AutoIt3Wrapper_Res_Fileversion=1.1.0
-global const $VERSION = "1.1.0"
+#AutoIt3Wrapper_Res_Fileversion=1.1.2
+global const $VERSION = "1.1.2"
+#cs
+
+  @EQ
+  from corz.org
+
+  https://corz.org/windows/software/@EQ/
+
+  Your speakers follow your screen, automatically.
+
+#ce
+
 
 #include <Array.au3>
 #include <GUIConstantsEx.au3>
@@ -2614,10 +2625,10 @@ endfunc
 
 ; About @EQ
 ;
-; Displays ListenerRuntime() once per second for the current Listener. 
+; Displays ListenerRuntime() once per second for the current Listener.
 ; Clicking the icon toggles the readout.
 ; Returns true after closing or false if the window cannot be created.
-; Saves its left/top coordinates in the INI; 
+; Saves its left/top coordinates in the INI;
 ; supplied coordinates are used until a position is saved.
 ;
 func DoAboutBox($about_left=default, $about_top=default)
@@ -2735,6 +2746,12 @@ endfunc
 #AutoIt3Wrapper_Run_After_Admin=Y
 
 ; Kill my .exe(s) if running. We'll use this new version immediately.
+; Remove the previous build's generated ZIPs and hashes.
+#AutoIt3Wrapper_Run_Before=if exist "%scriptdir%\..\@EQ.zip" del /a "%scriptdir%\..\@EQ.zip"
+#AutoIt3Wrapper_Run_Before=if exist "%scriptdir%\..\@EQ_Source.zip" del /a "%scriptdir%\..\@EQ_Source.zip"
+#AutoIt3Wrapper_Run_Before=if exist "%scriptdir%\..\@EQ.hash" del /a "%scriptdir%\..\@EQ.hash"
+#AutoIt3Wrapper_Run_Before=if exist "%scriptdir%\..\@EQ_Source.hash" del /a "%scriptdir%\..\@EQ_Source.hash"
+
 #AutoIt3Wrapper_Run_Before=taskkill /F /IM @EQListener.exe
 #AutoIt3Wrapper_Run_Before=taskkill /F /IM @EQ.exe
 
@@ -2796,6 +2813,12 @@ endfunc
 #AutoIt3Wrapper_Run_After=del /f /q ".\%scriptfile% - %fileversion%_stripped.au3"
 
 ; Fire-up the new version.
+; Refresh the release staging binaries and package both ZIPs with SHA-256 hashes.
+#AutoIt3Wrapper_Run_After=cmd /d /c copy /Y "C:\Program Files\corz\@EQ\@EQ.exe" "%scriptdir%\..\@EQ\@EQ.exe" && copy /Y "C:\Program Files\corz\@EQ\@EQListener.exe" "%scriptdir%\..\@EQ\@EQListener.exe" && 7z.exe a -mx7 -tzip "%scriptdir%\..\@EQ.zip" "%scriptdir%\..\@EQ"
+#AutoIt3Wrapper_Run_After=checksum.exe cq-th "..\@EQ.zip"
+#AutoIt3Wrapper_Run_After=cmd /d /c 7z.exe a -mx7 -tzip "-xr!.git" "%scriptdir%\..\@EQ_Source.zip" "%scriptdir%"
+#AutoIt3Wrapper_Run_After=checksum.exe cq-th "..\@EQ_Source.zip"
+
 #AutoIt3Wrapper_Run_After=start "" "C:\Program Files\corz\@EQ\@EQListener.exe"
 #AutoIt3Wrapper_Run_After=start "" "C:\Program Files\corz\@EQ\@EQ.exe"
 
